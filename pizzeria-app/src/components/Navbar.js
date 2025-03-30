@@ -1,15 +1,14 @@
-import {AppBar, Button, Toolbar, Typography} from "@mui/material";
+import {AppBar, Toolbar, Typography} from "@mui/material";
 import Sidebar from "./Sidebar";
 
 const Navbar = ({}) => {
     return (
-        <AppBar className="Barra" position="static">
+        <AppBar className="Barra" position="static" sx={{ backgroundColor: "transparent", boxShadow: "none", zIndex: 10}}>
             <Toolbar>
                 <Sidebar />
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={"black"}>
                     Monas Chinas
                 </Typography>
-                <Button color="inherit">Login</Button>
             </Toolbar>
         </AppBar>
     );

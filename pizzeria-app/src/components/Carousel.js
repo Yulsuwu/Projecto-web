@@ -7,16 +7,17 @@ import "swiper/css/pagination"
 const Carousel = () => {
     return (
 
-        <Swiper modules = {[Navigation,Pagination,Autoplay]} spaceBetween={50} slidesPerView={1} navigation
+        <Swiper modules = {[Navigation,Pagination,Autoplay]} spaceBetween={0} slidesPerView={1} navigation
                 pagination={{clickable: true}}
-                autoplay = {{delay: 3000}}>
+                autoplay = {{delay: 5000}}
+                style={{ width: "100vw", height: "100vh", position: "relative" }}>
 
             <SwiperSlide>
-                <img src="diapositiva1.jpg" alt="Slide 1" className="Slide"/>
+                <img src="diapositiva1.JPG" alt="Slide 1" className="Slide"/>
             </SwiperSlide>
 
             <SwiperSlide>
-                <img src="diapositiva2.jpeg" alt="Slide 2" className="Slide"/>
+                <img src="diapositiva2.jpg" alt="Slide 2" className="Slide"/>
             </SwiperSlide>
 
             <SwiperSlide>
