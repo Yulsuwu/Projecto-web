@@ -6,7 +6,7 @@ const Navbar = ({}) => {
         <AppBar className="Barra" position="static" sx={{ backgroundColor: "transparent", boxShadow: "none", zIndex: 10}}>
             <Toolbar>
                 <Sidebar />
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={"black"}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={"white"}>
                     Monas Chinas
                 </Typography>
             </Toolbar>

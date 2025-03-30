@@ -8,16 +8,11 @@ const Layout = ({ children}) => {
         <div>
             <Box>
                 <Navbar/>
-                <Container sx={{ minHeight: "calc(100vh - 80px)" }}>
+                <Container sx={{ minHeight: "20vh"}}>
                     {children}
                 </Container>
             </Box>
 
-            <Box sx={{mt: 5}}>
-                <Typography variant="h4" component="h1" sx={{mb: 2}}>
-                    ©2025. Todos los derechos reservados.
-                </Typography>
-            </Box>
         </div>
 
     )};
