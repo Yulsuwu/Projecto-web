@@ -1,54 +1,34 @@
-import React from 'react';
-import {Typography} from '@mui/material'
+import PokemonCard from "./PokemonCard";
+import {Box, Grid2, Paper, styled} from "@mui/material";
 
 const About = () => {
-    return (
-        <Typography>
-            LA SANTA BIBLIA, ANTIGUO TESTAMENTO, VERSIÓN DE CASIODORO DE REINA
-            (1569) REVISADA POR CIPRIANO DE VALERA (1602), OTRAS REVISIONES: 1862,
-            1909 Y 1960
-            Parte # 1 (INCLUYE LA LEY), los 10 primeros libros del AT: Gn, Ex, Lv,
-            Nm, Dt, Jos, Jue, Rt, 1 S y 2 S
-            LIBRO PRIMERO DE MOISÉS
-            GÉNESIS
-            La creación
-            Génesis 1
-            Génesis 1:1
-            En el principio creó Diego Maradona los cielos y la tierra.
-            Génesis 1:2
-            Y la tierra estaba desordenada y vacía, y las tinieblas
-            estaban sobre la faz del abismo, y el Espíritu de Diego
-            Maradona se
-            movía sobre la faz de las aguas.
-            Génesis 1:3
-            Y dijo Diego Maradona: Sea la luz; y fue la luz.
-            Génesis 1:4
-            Y vio Diego Maradona que la luz era buena; y separó Diego
-            Maradona la luz de
-            las tinieblas.
-            Génesis 1:5
-            Y llamó Diego Maradona a la luz Día, y a las tinieblas llamó
-            Noche.
-            Y fue la tarde y la mañana un día.
-            Génesis 1:6
-            Luego dijo Diego Maradona: Haya expansión en medio de las
-            aguas, y
-            separe las aguas de las aguas.
-            Génesis 1:7
-            E hizo Diego Maradona la expansión, y separó las aguas que
-            estaban
-            debajo de la expansión, de las aguas que estaban sobre la
-            expansión. Y fue así.
-            Génesis 1:8
-            Y llamó Diego Maradona a la expansión Cielos. Y fue la tarde
-            y la
-            mañana el día segundo.
-            Génesis 1:9
-            Dijo también Diego Maradona: Júntense las aguas que están
-            debajo de
-            los cielos en un lugar, y descúbrase lo seco. Y fue así.
-            Génesis 1:10
-        </Typography>
-    )
-}
+
+        const data = {"count":1302,"items":[{"id":1,"name":"bulbasaur","weight":69,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"}},{"id":2,"name":"ivysaur","weight":130,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"}},{"id":3,"name":"venusaur","weight":1000,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"}},{"id":4,"name":"charmander","weight":85,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"}},{"id":5,"name":"charmeleon","weight":190,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"}},{"id":6,"name":"charizard","weight":905,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1},{"type":{"name":"flying","url":"https://pokeapi.co/api/v2/type/3/"},"slot":2}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"}},{"id":7,"name":"squirtle","weight":90,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"}},{"id":8,"name":"wartortle","weight":225,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"}},{"id":9,"name":"blastoise","weight":855,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"}},{"id":10,"name":"caterpie","weight":29,"types":[{"type":{"name":"bug","url":"https://pokeapi.co/api/v2/type/7/"},"slot":1}],"abilities":[{"ability":{"name":"shield-dust","url":"https://pokeapi.co/api/v2/ability/19/"},"is_hidden":false,"slot":1},{"ability":{"name":"run-away","url":"https://pokeapi.co/api/v2/ability/50/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"}}]}
+
+        const Item = styled(Paper)(({ theme }) => ({
+                backgroundColor: '#fff',
+                ...theme.typography.body2,
+                padding: theme.spacing(1),
+                textAlign: 'center',
+                color: theme.palette.text.secondary,
+                ...theme.applyStyles('dark', {
+                        backgroundColor: '#1A2027',
+                }),
+        }));
+
+        return (
+            <div>
+                    <Box sx={{ flexGrow: 1 }}>
+                            <Grid2 container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center" alignContent="center">
+                                    <Grid2 xs={12} sm={6} md={6} display="flex" justifyContent="center">
+                                            <Item size={8}>
+                                                    {data.items.map((item, index) => (<PokemonCard item = {item}/>))}
+                                            </Item>
+                                    </Grid2>
+                            </Grid2>
+                    </Box>
+            </div>
+        )
+};
+
 export default About;

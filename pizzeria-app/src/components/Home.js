@@ -1,12 +1,16 @@
-import Carousel from "./Carousel";
-const Home = ({  }) =>{
-    return(
+import Carousel from './Carousel';
+
+const Home = () => {
+    return (
         <div>
             <h1>
-                Pagina Principal
+                Página Principal
             </h1>
+
             <Carousel />
         </div>
-    )
-};
+
+    )};
+
+
 export default Home;

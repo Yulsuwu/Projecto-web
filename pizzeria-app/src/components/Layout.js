@@ -1,19 +1,25 @@
-import {Box, Container} from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
 import Navbar from "./Navbar";
 
+const Layout = ({ children}) => {
 
-const Layout = ({ children }) =>{
     return (
-        <Box className = {"Container"}>
-            <Navbar />
-            <Container>
-                { children }
-            </Container>
-            <Box className ="footer">
-                Todos los derechos reservados
+
+        <div>
+            <Box>
+                <Navbar/>
+                <Container>
+                    {children}
+                </Container>
             </Box>
-        </Box>
-    )
-};
+
+            <Box>
+                <Typography variant="h4" component="h1" sx={{mb: 2}}>
+                    Derechos Reservados
+                </Typography>
+            </Box>
+        </div>
+
+    )};
 
 export default Layout;
