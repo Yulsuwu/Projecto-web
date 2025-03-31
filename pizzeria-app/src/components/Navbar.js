@@ -7,7 +7,7 @@ const Navbar = ({}) => {
             <Toolbar>
                 <Sidebar />
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={"white"}>
-                    Monas Chinas
+                    Menú
                 </Typography>
             </Toolbar>
         </AppBar>

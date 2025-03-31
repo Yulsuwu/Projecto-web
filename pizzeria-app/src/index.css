@@ -12,3 +12,11 @@ code {
     monospace;
 }
 
+body.nosotros {
+    background-image: url('fondo.JPG');
+    background-size: cover;
+    margin: 0;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
