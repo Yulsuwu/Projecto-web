@@ -34,7 +34,7 @@ const Sidebar = () => {
                         <ListItem button component={Link} to="/Nosotros">
                             <ListItemText primary="Nosotros" />
                         </ListItem>
-                        <ListItem button component={Link} to="/about">
+                        <ListItem button component={Link} to="/Productos">
                             <ListItemText primary="¡Arma tu pedido!" />
                         </ListItem>
                     </List>
