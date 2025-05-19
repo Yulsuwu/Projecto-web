@@ -13,7 +13,7 @@ const Carousel = () => {
                 style={{ width: "100vw", height: "100vh", position: "relative" }}>
 
             <SwiperSlide>
-                <img src="diapositiva1.JPG" alt="Slide 1" className="Slide"/>
+                <img src="diapositiva1.jpg" alt="Slide 1" className="Slide"/>
             </SwiperSlide>
 
             <SwiperSlide>
