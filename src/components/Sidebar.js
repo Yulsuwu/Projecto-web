@@ -37,6 +37,9 @@ const Sidebar = () => {
                         <ListItem button component={Link} to="/Productos">
                             <ListItemText primary="¡Arma tu pedido!" />
                         </ListItem>
+                        <ListItem button component={Link} to="/usuario">
+                            <ListItemText primary="Iniciar Sesión / Registro" />
+                        </ListItem>
                     </List>
                 </Box>
             </Drawer>
