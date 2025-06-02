@@ -5,7 +5,6 @@ import {
     TextField,
     Button,
     Typography,
-    Box,
     Container,
     Alert,
     Snackbar,
@@ -26,7 +25,8 @@ const UserCard = ({ onLogin }) => {
         email: '',
         password: '',
         nombre: '',
-        apellido: '',
+        apellido_paterno: '',
+        apellido_materno: '',
         direccion: '',
         telefono: ''
     });
@@ -45,7 +45,7 @@ const UserCard = ({ onLogin }) => {
         setSuccess('');
 
         try {
-            const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
+            const endpoint = isLogin ? '/api/auth/login' : '/api/usuarios';
             const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
@@ -54,7 +54,15 @@ const UserCard = ({ onLogin }) => {
                 body: JSON.stringify(isLogin ? {
                     email: formData.email,
                     password: formData.password
-                } : formData)
+                } : {
+                    email: formData.email,
+                    password: formData.password,
+                    nombre: formData.nombre,
+                    apellido_paterno: formData.apellido_paterno,
+                    apellido_materno: formData.apellido_materno,
+                    direccion: formData.direccion,
+                    telefono: formData.telefono
+                })
             });
 
             const data = await response.json();
@@ -62,7 +70,7 @@ const UserCard = ({ onLogin }) => {
             if (response.ok) {
                 setSuccess(isLogin ? 'Inicio de sesión exitoso' : 'Registro exitoso');
                 if (isLogin && onLogin) {
-                    onLogin(data); // Pasar los datos del usuario al componente padre
+                    onLogin(data);
                 }
                 setTimeout(() => {
                     navigate('/');
@@ -79,8 +87,8 @@ const UserCard = ({ onLogin }) => {
 
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
-            <Card 
-                sx={{ 
+            <Card
+                sx={{
                     maxWidth: 600,
                     margin: 'auto',
                     boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
@@ -88,11 +96,11 @@ const UserCard = ({ onLogin }) => {
                 }}
             >
                 <CardContent sx={{ p: 4 }}>
-                    <Typography 
-                        variant="h4" 
-                        component="h1" 
-                        gutterBottom 
-                        sx={{ 
+                    <Typography
+                        variant="h4"
+                        component="h1"
+                        gutterBottom
+                        sx={{
                             textAlign: 'center',
                             color: '#1a1a1a',
                             fontWeight: 'bold',
@@ -146,9 +154,18 @@ const UserCard = ({ onLogin }) => {
                                     margin="normal"
                                 />
                                 <TextField
-                                    name="apellido"
-                                    label="Apellido"
-                                    value={formData.apellido}
+                                    name="apellido_paterno"
+                                    label="Apellido Paterno"
+                                    value={formData.apellido_paterno}
+                                    onChange={handleChange}
+                                    fullWidth
+                                    required
+                                    margin="normal"
+                                />
+                                <TextField
+                                    name="apellido_materno"
+                                    label="Apellido Materno"
+                                    value={formData.apellido_materno}
                                     onChange={handleChange}
                                     fullWidth
                                     required
@@ -201,16 +218,16 @@ const UserCard = ({ onLogin }) => {
                 </CardContent>
             </Card>
 
-            <Snackbar 
-                open={!!error || !!success} 
-                autoHideDuration={6000} 
+            <Snackbar
+                open={!!error || !!success}
+                autoHideDuration={6000}
                 onClose={() => {
                     setError('');
                     setSuccess('');
                 }}
             >
-                <Alert 
-                    severity={error ? "error" : "success"} 
+                <Alert
+                    severity={error ? "error" : "success"}
                     sx={{ width: '100%' }}
                 >
                     {error || success}
@@ -220,4 +237,4 @@ const UserCard = ({ onLogin }) => {
     );
 };
 
-export default UserCard; 
+export default UserCard;
